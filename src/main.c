@@ -2,6 +2,10 @@
 #include "unicode.h"
 
 #include "exercicios/loops.c"
+#include "exercicios/tabuada.c"
+#include "exercicios/faixa_etaria.c"
+#include "exercicios/media_simples.c"
+#include "exercicios/fatorial.c"
 
 typedef struct Exercicio {
     wchar_t *name;
@@ -12,6 +16,22 @@ Exercicio exercicios[] = {
    {
     L"Exercício de Laços",
     exe_loops
+   },
+   {
+    L"Exercício de Tabuada",
+    exe_tabuada
+   },
+   {
+    L"Exercício de Faixa Etária",
+    exe_faixa_etaria
+   },
+   {
+    L"Exercício de Média Simples",
+    exe_media_simples
+   },
+   {
+    L"Exercício de Fatorial",
+    exe_fatorial
    },
    {
     L"Sair",
@@ -44,5 +64,7 @@ int main() {
             break;
 
         exercicios[op].cb();
+        system("pause");
+        system("cls");
     }
 }
